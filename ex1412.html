@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <title>Exercice 14 Décembre</title>
+
+<header>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="ex1412.css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+</header>
+
+<head>
+</head>
+
+<body>
+
+<fieldset name="formu">
+  <p>
+  <label id="titre"> Veuillez saisir vos identifiants
+  </p><br>
+
+  <p>
+  <label id="log"> Identifiant : <input id="login" type="text" placeholder="Entrez votre login"/>
+  </p></label id="log" required><br>
+
+  <p>
+  <label id="mdp"> Mot de passe : <input id="passw" type="password" placeholder="5 caractères minimum" pattern=".{5,}[0-9a-zA-Z]"/>
+  </p></label id="mdp" required><br>
+
+  <a href="#" id="oublimdp"><h4>Mot de passe oublié ?</h4></a>
+
+  <p>
+  <label id="clause"><input type="checkbox" required name="accept_clause">Accepter les conditions d'utilisations*
+  </p></label id="clause">
+
+  <p>
+    <label id="Masque"> E-mail : <input type="text" placeholder="Adresse mail"/><br>
+      <button type="Envoyer">Envoyer</button>
+  </p></label id="Masque">
+
+  <div id="erreur"> /!\ Une erreur est survenue, veuillez verifier vos données. /!\</div>
+
+  <p>
+  <label id="valider"><button type="bouton">Valider le formulaire</button>
+  </p></label id="valider">
+
+  <p>
+  <label id="return"><a href="#" button type="bouton">Retour au formulaire</buton>
+  </a></label id="return"></p>
+  <!--Masquer et afficher sur le clic de Mot de passe oublié ?.-->
+
+
+</fieldset>
+
+
+<script>
+
+$(document).ready(function(){
+    $("#erreur").hide();
+    $("#Masque").hide();
+    $("#return").hide();
+});
+
+$("#valider").click(function(){
+  var log = $("#login")[0].checkValidity();
+  var motpas = $("#passw")[0].checkValidity();
+
+      if (motpas == false || log == false)
+      {
+         $("#erreur").show("fast");
+      }
+      else
+      {
+         $("#erreur").hide();
+      }
+      return false;
+   });
+
+$("#oublimdp").click(function(){
+      $("#erreur").hide();
+   	  $("#oublimdp").hide();
+      $("#log").hide();
+      $("#mdp").hide();
+      $("#clause").hide();
+      $("#valider").hide();
+      $("#return").show();
+      $("#Masque").show("fast");
+      return false;
+});
+
+$("#return").click(function(){
+      $("#erreur").hide();
+   	  $("#oublimdp").show();
+      $("#log").show();
+      $("#mdp").show();
+      $("#valider").show();
+      $("#clause").show();
+      $("#return").hide();
+      $("#Masque").hide("fast");
+      return false;
+   });
+
+
+
+
+
+</script>
+
+</body>
+</html>
