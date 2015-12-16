@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text.javascript" src="jquery.js"></script>
+  <link rel="stylesheet" href="ex2.css"/>
+  <link rel="shortcut icon" href="emboc.png"/>
+  <link rel="icon" href="emboc.png"/>
+
+
+  <title>Exercice 15 Décembre jquery</title>
+  <style type="text/css">.wifeo_pagemenu > a{color:#00FFE1;text-decoration:none} .wifeo_rubrique > a{color:#0B1AE0;text-decoration:none} .wifeo_rubrique:hover > a{color:#0B1AE0;font-weight:bold;text-decoration:none} .wifeo_pagesousmenu > a{color:#000000;text-decoration:none} .wifeo_conteneur_menu{border-spacing:0px} .wifeo_conteneur_menu{width:100%;display:table;height:50px} .wifeo_conteneur_menu a{text-decoration:none;display:table-cell;vertical-align:middle;height:30px} .wifeo_pagemenu, .wifeo_rubrique{float:left;width:25%;display:table;vertical-align:middle;position:relative} @media screen and (min-device-width:1024px){.wifeo_pagemenu span, .wifeo_rubrique span{color:#FFFFFF;position:relative;display:inline-block;padding:5px 0 5px;background-color:#00A096;width:100%;height:30px;text-align:center;font-size:22px;-webkit-transition:-webkit-transform 0.5s;-moz-transition:-moz-transform 0.5s;-ms-transition:-ms-transform 0.5s;-o-transition:-o-transform 0.5s;transition:transform 0.5s;-webkit-transform-origin:50% 0;-moz-transform-origin:50% 0;-ms-transform-origin:50% 0;-o-transform-origin:50% 0;transform-origin:50% 0;transform-style:preserve-3d}} .wifeo_pagemenu a, .wifeo_rubrique > a{color:#FFFFFF;position:absolute;display:inline-block;padding-top:5px;padding-bottom:5px;background-color:#00A096;width:100%;height:30px;text-align:center;font-size:22px} @media screen and (min-device-width:1024px){.wifeo_pagemenu a, .wifeo_rubrique > a{color:#FFFFFF;position:absolute;display:inline-block;padding-top:5px;padding-bottom:5px;background-color:#00FFE1;width:100%;height:30px;text-align:center;font-size:22px}} .wifeo_pagemenu:hover span, .wifeo_rubrique:hover span{width:100%;height:30px} @media screen and (min-device-width:1024px){.wifeo_pagemenu:hover span, .wifeo_rubrique:hover span{border-bottom:6px solid #006E64;-webkit-transform:translateY(-30px) scale(0.6);-moz-transform:translateY(-30px) scale(0.6);-ms-transform:translateY(-30px) scale(0.6);-o-transform:translateY(-30px) scale(0.6);transform:translateY(-30px) scale(0.6);-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-ms-transition:all 0.25s ease;-o-transition:all 0.25s ease;transition:all 0.25s ease}} .wifeo_sousmenu{width:100%;left:0;opacity:0;position:absolute;top:10px;visibility:hidden;z-index:1} @media screen and (min-device-width:1024px){.wifeo_sousmenu{-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-ms-transition:all 0.25s ease;-o-transition:all 0.25s ease;transition:all 0.25s ease}} .wifeo_pagesousmenu{width:100%;text-align:center;display:table} .wifeo_pagesousmenu a{width:100%;text-align:center;background-color:#00FFE1;border-bottom:3px solid #00FFE1;-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-ms-transition:all 0.25s ease;-o-transition:all 0.25s ease;transition:all 0.25s ease} .wifeo_pagesousmenu:hover a{width:100%;text-align:center;background-color:#46FFFF;border-bottom:3px solid #0AEBCD} .wifeo_sousmenu a{padding-left:5px;padding-right:5px;text-shadow:none;background-position:center;text-align:center;background-color:#00FFE1} .wifeo_rubrique:hover > .wifeo_sousmenu{opacity:1;top:35px;visibility:visible}</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+     $(function(){
+        setInterval(function(){
+           $(".slideshow ul").animate({marginLeft:-350},800,function(){
+              $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+           })
+        }, 3500);
+     });
+  </script>
+
+
+</head>
+
+<body>
+<!--
+  <nav>
+    <div class="wrapper">
+      <ul id="menu" class="clearfix">
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">1ere page</a></li>
+        <li><a href="#">2nde page</a></li>
+          <li><a href="#">3eme page</a>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </nav>
+-->
+<header>
+  <img src="index.jpeg"> <!--1256  x 106 -->
+  <nav><div class='wifeo_conteneur_menu'>
+    <div class='wifeo_rubrique'>
+      <a href='#mw999'>Index</a>
+      <span>Index</span>
+      <div class='wifeo_sousmenu'>
+        <div class='wifeo_pagesousmenu'>
+          <a href='http://facebook.com'>Facebook</a>
+        </div>
+        <div class='wifeo_pagesousmenu'>
+          <a href='http://google.com'>Google</a>
+        </div>
+        <div class='wifeo_pagesousmenu'>
+          <a href='http://youtube.com'>Youtube</a>
+        </div>
+      </div>
+    </div>
+    <div class='wifeo_pagemenu'>
+      <a href='http://Facebook.com'>Facebook</a>
+      <span>Facebook</span>
+    </div>
+    <div class='wifeo_pagemenu'>
+      <a href='http://google.com'>Google</a>
+      <span>Google</span>
+    </div>
+    <div class='wifeo_pagemenu'>
+      <a href='http://youtube.com'>Youtube</a>
+      <span>Youtube</span>
+    </div>
+  </div>
+</nav>
+  <!--<ol id="index">
+    <li>Acceuil</li>
+    <li>Premiere page</li>
+    <li>Deuxième page</li>
+    <li>Troisième page</li>
+    <li class="menu">Index :
+      <ul>
+        <li>Acceuil</li>
+        <li>Première page</li>
+        <li>Deuxième page</li>
+        <li>Troisième page</li>
+      </ul>
+    </li>
+  </ol>-->
+
+</header>
+
+
+  <div id="slideshow">
+	<ul class="bjqs">
+		<li><img src="embfr.jpg" alt="1" width="350" height="200" ></li>
+		<li><img src="embom.jpg" alt="2" width="350" height="200"></li>
+    <li><img src="embrcnm.jpg" alt="2" width="350" height="200"></li>
+    <li><img src="emboc.png" alt="2" width="350" height="200"></li>
+	</ul>
+</div>
+
+
+
+
+
+<!--
+<div id="diapo">
+	<img src="emboc.jpg" alt="" />
+	<img src="" alt="" />
+	<img src="4.jpg" alt="" />
+	<img src="5.jpg" alt="" />
+	<img src="6.jpg" alt="" />
+	<img src="7.jpg" alt="" />
+	<img src="8.jpg" alt="" />
+	<img src="9.jpg" alt="" />
+	<img src="10.jpg" alt="" />
+</div>
+-->
+
+</body>
+
+<footer>
+<div class="sign">
+<p>Contact : j.raynaud@outlook.com</p>
+</div>
+
+<div class="date">
+  Réaliser le 15-12-2015
+</div>
+<!-- à gauche menu avec 5 ou 6 liens -->
+<!-- date de création à G -->
+
+<!-- adresse mail ou postale à droite -->
+</footer>
+
+
+</html>

@@ -1,0 +1,58 @@
+
+body
+{
+  margin: 0;
+  font-family: sans-serif;
+}
+div.sign
+{
+  position: absolute;
+  margin-top: 430px;
+  margin-left: 975px;
+}
+div.date
+{
+  position: absolute;
+  margin-top: 450px;
+  margin-right: 900px;
+  margin-left: 10px;
+}
+h1
+{
+  margin-left: 250px;
+  margin-top: 170px;
+}
+
+
+#index
+{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.menu
+{
+  color: grey;
+}
+li
+{
+  color: blue;
+}
+
+.slideshow {
+   width: 350px;
+   height: 200px;
+   overflow: hidden;
+   border: 3px solid #F2F2F2;
+}
+
+.slideshow ul {
+    /* 4 images donc 4 x 100% */
+   width: 400%;
+   height: 200px;
+   padding:0; margin:0;
+   list-style: none;
+}
+.slideshow li {
+   float: left;
+}
